@@ -1,0 +1,120 @@
+/* Reset básico */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mukta', sans-serif;
+}
+
+/* Corpo do formulário */
+.container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.container img {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* Estilo dos campos de entrada */
+input,
+select {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-color: #ff5c5c;
+  outline: none;
+}
+
+/* Estilo dos botões */
+button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #ff5c5c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff4040;
+}
+
+/* Estilo dos links */
+button.link-usuarios,
+button.link-pagina-incial {
+  width: auto;
+  padding: 0.6rem 1.2rem;
+  background-color: transparent;
+  color: #ff5c5c;
+  border: 1px solid #ff5c5c;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 1rem 0.5rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button.link-usuarios:hover,
+button.link-pagina-incial:hover {
+  background-color: #ff5c5c;
+  color: #fff;
+}
+
+/* Estilo dos campos de seleção */
+.disponivel-container,
+.categoria-container {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.disponivel-container label,
+.categoria-container label {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.disponivel-container select,
+.categoria-container select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.3s;
+}
+
+.disponivel-container select:focus,
+.categoria-container select:focus {
+  border-color: #ff5c5c;
+  outline: none;
+}
