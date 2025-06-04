@@ -12,7 +12,7 @@ function ListaDeUsuarios() {
     useEffect(() => {
         const carregarUsuarios = async () => {
             try {
-                const response = await axios.get('http://localhost:8080/cardapio');
+                const response = await axios.get('https://deploy-restaurante.onrender.com');
                 setUsuarios(response.data);
             } catch (error) {
                 alert('Erro ao buscar usuários: ' + error.message);
