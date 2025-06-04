@@ -17,7 +17,7 @@ function FormularioCadastro() {
 
     const cadastrarUsuario = async () => {
         try {
-            const response = await axios.post('https://deploy-restaurante.onrender.com', {
+            const response = await axios.post('https://deploy-restaurante.onrender.com/cardapio', {
                 nomePrato,
                 categoria,
                 disponivel,
