@@ -1,0 +1,12 @@
+package com.example.aula.repository;
+
+import com.example.aula.model.Cardapio;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface CardapioRepository extends JpaRepository<Cardapio, Long> {
+    Optional<Cardapio> findByNomePrato(String nomePrato);
+}
