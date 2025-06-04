@@ -36,6 +36,7 @@ public class CardapioService {
 
 
         cardapioAtualizar.setNomePrato(cardapio.getNomePrato());
+        cardapioAtualizar.setDescricao(cardapio.getDescricao());
         cardapioAtualizar.setPreco(cardapio.getPreco());
         cardapioAtualizar.setDisponivel(cardapio.getDisponivel());
         cardapioAtualizar.setCategoria(cardapio.getCategoria());

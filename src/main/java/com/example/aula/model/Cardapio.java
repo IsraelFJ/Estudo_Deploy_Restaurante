@@ -24,6 +24,10 @@ public class Cardapio {
 
     @NotNull(message = "O preço é obrigatorio")
     @PositiveOrZero(message = "O valor não pode ser menor que Zero")
+    private double descricao;
+
+    @NotNull(message = "O preço é obrigatorio")
+    @PositiveOrZero(message = "O valor não pode ser menor que Zero")
     private double preco;
 
     @NotBlank(message = "URL é obrigatorio")
@@ -33,11 +37,12 @@ public class Cardapio {
     public Cardapio() {
     }
 
-    public Cardapio(Long id, Disponivel disponivel, Categoria categoria, String nomePrato, double preco, String urlImage) {
+    public Cardapio(Long id, Disponivel disponivel, Categoria categoria, String nomePrato, double descricao, double preco, String urlImage) {
         this.id = id;
         this.disponivel = disponivel;
         this.categoria = categoria;
         this.nomePrato = nomePrato;
+        this.descricao = descricao;
         this.preco = preco;
         this.urlImage = urlImage;
     }
@@ -75,11 +80,22 @@ public class Cardapio {
     }
 
     @NotNull(message = "O preço é obrigatorio")
+    @PositiveOrZero(message = "O valor não pode ser menor que Zero")
+    public double getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(@NotNull(message = "O preço é obrigatorio") @PositiveOrZero(message = "O valor não pode ser menor que Zero") double descricao) {
+        this.descricao = descricao;
+    }
+
+    @NotNull(message = "O preço é obrigatorio")
+    @PositiveOrZero(message = "O valor não pode ser menor que Zero")
     public double getPreco() {
         return preco;
     }
 
-    public void setPreco(@NotNull(message = "O preço é obrigatorio") double preco) {
+    public void setPreco(@NotNull(message = "O preço é obrigatorio") @PositiveOrZero(message = "O valor não pode ser menor que Zero") double preco) {
         this.preco = preco;
     }
 
@@ -91,3 +107,4 @@ public class Cardapio {
         this.urlImage = urlImage;
     }
 }
+
