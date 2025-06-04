@@ -9,6 +9,7 @@ import axios from 'axios';
 function FormularioCadastro() {
     const [nomePrato, setNomePrato] = useState('');
     const [categoria, setCategoria] = useState('');
+    const [preco, setPreco] = useState('');
     const [disponivel, setDisponivel] = useState('');
     const [urlImage, setUrlImage] = useState('');
     const navigate = useNavigate();
@@ -20,6 +21,7 @@ function FormularioCadastro() {
                 nomePrato,
                 categoria,
                 disponivel,
+                preco,
                 urlImage
             });
 
@@ -52,12 +54,21 @@ function FormularioCadastro() {
                 <input 
                     type="text"
                     id="nomePrato"
-                    placeholder="Nome do Prato"
+                    placeholder="Nome do Produto"
                     value={nomePrato}
                     onChange={(e) => setNomePrato(e.target.value)}
                     required
                 />
-          
+                 <input 
+                    type="number"
+                    id="preco"
+                    placeholder="Preço do Produto"
+                    value={preco}
+                    onChange={(e) => setPreco(e.target.value)}
+                    required
+                    step="0.01" // permite centavos
+                    min="0"
+                />          
                 <input 
                     type="text"
                     id="urlImage"
