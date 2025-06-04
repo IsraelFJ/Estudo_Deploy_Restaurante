@@ -2,6 +2,9 @@ package com.example.aula.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.PositiveOrZero;
+import org.springframework.lang.NonNull;
 
 @Entity
 @Table(name = "tab_cardapio")
@@ -19,6 +22,10 @@ public class Cardapio {
     @NotBlank(message = "Nome da bebida é obrigatorio")
     private String nomePrato;
 
+    @NotNull(message = "O preço é obrigatorio")
+    @PositiveOrZero(message = "O valor não pode ser menor que Zero")
+    private double preco;
+
     @NotBlank(message = "URL é obrigatorio")
     private String urlImage;
 
@@ -26,11 +33,12 @@ public class Cardapio {
     public Cardapio() {
     }
 
-    public Cardapio(Long id, Disponivel disponivel, Categoria categoria, String nomePrato, String urlImage) {
+    public Cardapio(Long id, Disponivel disponivel, Categoria categoria, String nomePrato, double preco, String urlImage) {
         this.id = id;
         this.disponivel = disponivel;
         this.categoria = categoria;
         this.nomePrato = nomePrato;
+        this.preco = preco;
         this.urlImage = urlImage;
     }
 
@@ -64,6 +72,15 @@ public class Cardapio {
 
     public void setNomePrato(@NotBlank(message = "Nome da bebida é obrigatorio") String nomePrato) {
         this.nomePrato = nomePrato;
+    }
+
+    @NotNull(message = "O preço é obrigatorio")
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(@NotNull(message = "O preço é obrigatorio") double preco) {
+        this.preco = preco;
     }
 
     public @NotBlank(message = "URL é obrigatorio") String getUrlImage() {
