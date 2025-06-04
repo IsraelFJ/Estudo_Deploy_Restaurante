@@ -110,14 +110,14 @@ function FormularioCadastro() {
 
                 <button type="submit">Cadastrar</button>
             </form>
-
+            <div className="bottom_new"> 
             <button onClick={() => navigate('/usuarios')} className="link-usuarios">
                 Ver usuários cadastrados
             </button>
             <button onClick={() => navigate('/')} className="link-pagina-incial">
                 Home
             </button>
-
+            </div>
             <MensagemFeedback
                 mensagem={mensagem}
                 tipo={tipoMensagem}

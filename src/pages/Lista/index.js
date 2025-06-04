@@ -10,12 +10,12 @@ function PaginaListaUsuarios() {
 return (
         <div className='pagina-lista-usuarios'>
             <div className='container'>
-                <h2>Lista de usuários</h2>
+                <h2>Cardapio</h2>
                 <ListaDeUsuarios />
                 <button onClick={() => navigate('/cadastro')} className='link-voltar'>
-                    Cadastrar usuários
+                    Cadastrar Pratos
                 </button>
-               <button onClick={() => navigate('/')} className="link-Pagina-inicial">
+                <button onClick={() => navigate('/')} className="link-Pagina-inicial">
                Home
             </button>
             </div>

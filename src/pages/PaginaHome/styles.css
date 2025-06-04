@@ -47,7 +47,15 @@ button {
 }
 
 h1 {
-    color: #91947e;
+    color: #EA1D2C; /* Cor principal do texto (vermelho do iFood) */
     font-family: Arial, sans-serif;
     font-size: 100px;
+    /* text-shadow: h-shadow v-shadow blur-radius color; */
+    text-shadow: 
+        -1px -1px 0 #000,  /* Top-left */
+        1px -1px 0 #000,   /* Top-right */
+        -1px 1px 0 #000,   /* Bottom-left */
+        1px 1px 0 #000;    /* Bottom-right */
+    /* Ou uma sombra mais suave, tipo brilho: */
+    /* text-shadow: 0 0 5px black, 0 0 10px black; */
 }
