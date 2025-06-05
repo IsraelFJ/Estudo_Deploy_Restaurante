@@ -30,6 +30,7 @@ function ListaDeUsuarios() {
                 usuarios.map(usuario => (
                     <li key={usuario.id}>
                         <strong>Nome do Prato:</strong> {usuario.nomePrato} <br />
+                        <strong>Nome do Valor R$:</strong> {usuario.preco} <br />
                         <strong>Categoria:</strong> {usuario.categoria} <br />
                         <strong>Disponível:</strong> {usuario.disponivel} <br />                        
                         {usuario.urlImage && (
